@@ -26,26 +26,6 @@ var seats_booked = 0;
 var date;
 mongoose.connect("mongodb://localhost/tickets");
 
-// var poster_schema = new mongoose.Schema({
-//   name: String,
-//   img_path: String,
-// });
-//
-// var movies_schema = new mongoose.Schema({
-//   name: String,
-//   back_path: String,
-//   img_path: String,
-//   rating: Number,
-//   duration: String,
-//   release_date: String,
-//   languages: [String],
-//   genre: [String],
-//   votes: String,
-//   synopsis: [String],
-//   cast: [{ name: String, proffession: String, role: String, img_path: String }],
-//   crew: [{ name: String, role: [String], img_path: String }],
-//   adult: Boolean,
-// });
 
 var user_schema = new mongoose.Schema({
   fname: String,
@@ -59,17 +39,10 @@ var user_schema = new mongoose.Schema({
 
 var errors = null;
 
-// var movie = mongoose.model("movie", movies_schema);
-// var poster = mongoose.model("poster", poster_schema);
 var user = mongoose.model("user", user_schema);
 
 var login = 0;
 
-// poster.create({
-//   name: "Housefull 4",
-//   img_path:
-//     "https://in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/housefull-4-et00064161-27-10-2017-02-08-55.jpg",
-// });
 
 app.get("/", function (req, res) {
   console.log("INDEX Page");
